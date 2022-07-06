@@ -1,13 +1,16 @@
-// /*********************************************************************************
-// * WEB322 – Assignment 04
-// * I declare that this assignment is my own work in accordance with Seneca Academic Policy. No part 
-// * of this assignment has been copied manually or electronically from any other source 
-// * (including 3rd party web sites) or distributed to other students.
-// * 
-// * Name: Harsh Vishnu Limbachiya  Student ID: 157295197  Date: 05/7/2022
-// *
-// ***********************************************************************************
-
+/*********************************************************************************
+* WEB322 – Assignment 04
+* I declare that this assignment is my own work in accordance with Seneca Academic Policy. No part
+* of this assignment has been copied manually or electronically from any other source
+* (including 3rd party web sites) or distributed to other students.
+*
+* Name: Harsh Vishnu Limbachiya Student 
+  ID: 157295197 
+  Date:  05/07/2022
+*
+* Online (Heroku) Link: https://infinite-chamber-07340.herokuapp.com/
+*
+********************************************************************************/
 const HTTP_PORT = process.env.PORT || 8080;
 const express = require("express");
 const path = require("path");
@@ -57,6 +60,10 @@ officeData.initialize().then(function(){
     //set http request to /list 
     app.get("/list", (req, res) => {
         res.sendFile( path.resolve('/public/views/list.html'));
+    });
+
+    app.get("/storefront", (req, res) => {
+        res.sendFile( path.resolve('/public/views/storefront.html'));
     });
 
     //set default page not found status
