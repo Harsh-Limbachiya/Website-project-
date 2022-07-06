@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Home Page</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/theme.css" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital@1&family=Splash&display=swap" rel="stylesheet">
+    </head>
+    <body> <!-- style="background-color: rgb(143, 123, 123);" -->
+         <nav class=" navbar bg-light  fixed-top">
+            <h4>Harsh Limbachiya</h4>
+            <a href="../views/home.html" class="nav-link">Home</a>
+            <a href="../views/audio.html" class="nav-link">Audio</a>
+            <a href="../views/video.html" class="nav-link">Video</a>
+            <a href="../views/table.html" class="nav-link">Table</a>
+            <a href="../views/list.html" class="nav-link">List</a>
+            <a href="../views/storefront.html" class="nav-link">Store</a>
+        </nav>
+        <div class="bodyPart">
+            <h3 style="text-align: center;">Welcome To My Website</h3> <!-- -->
+        <p style=" text-align: center; padding: 10px 100px;"> <!-- -->
+            This Website is created by Harsh Limbachiya to demonstrate the use of 
+            HTML5 principles and Techniques, also this website includes routing and other
+            features that are used such as express.<br><br> It also has a package.json, which contains 
+            all the information of packages in use and installed.<br><br>
+            It is a very basic website to learn routing on Server using Express.
+        </p>
+        <h3 style="text-align: center;">Reflection</h3> <!--"-->
+        <p style=" text-align: center; padding: 10px 100px">  <!---->
+            Hello There, I am Harsh and I'm 2nd Year Student at Seneca and I have
+            enrolled in WEB311 cousre that is based on designing and devloping websites
+            using all the functionalities and different Text oriented languages such as HTML5, CSS,
+            Javacript, Node.js, express, etc.<br><br>
+            This Course Helped me a lot in understanding how the website works and what all things and
+            functionality we can use to make our website more responsive and atractive. 
+        </p>  
+        <h3 style="text-align: center;">HTML5 Information</h3> <!---->
+        <p style="text-align: center; padding: 10px 100px"> <!---->
+            In this website we used HTML5 Topics to get response from the server 
+            using the express library.<br><br>
+            We made different web pages like home.html, list.html, audio.html, video.html, etc 
+            and used the path library to route and display different part of code and webpage.
+            <br><br>For Eg.
+            <br><br>
+            <span style="text-decoration: underline;">GET /employee/num</span><br> <!---->
+            -This route will return a JSON formatted string containing a single employee whose employeeNum property 
+            matches the num parameter in the route, ie: http://localhost:8080/employee/5 returns employee 5 and 
+            http://localhots:8080/employee/6 returns employee 6 and so on. <br><br>
+            <span style="text-decoration: underline;">GET /audio</span><br> <!---->
+            -This route simply returns the html code from the audio.html file located within the views directory.
+        </p>
+        </div>
+          
+        <script href="../officeData.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>

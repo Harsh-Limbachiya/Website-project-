@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>table Page</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital@1&family=Splash&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/theme.css" type="text/css"/>
+        <style>
+            td,tr{
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body> <!--style="background-color: rgb(143, 123, 123);"-->
+        <nav class=" navbar bg-light  fixed-top">
+            <h4>Harsh Limbachiya</h4>
+            <a href="../views/home.html" class="nav-link">Home</a>
+            <a href="../views/audio.html" class="nav-link">Audio</a>
+            <a href="../views/video.html" class="nav-link">Video</a>
+            <a href="../views/table.html" class="nav-link">Table</a>
+            <a href="../views/list.html" class="nav-link">List</a>
+            <a href="../views/storefront.html" class="nav-link">Store</a>
+        </nav>
+        <div class="bodyPart">
+            <h3 style="text-align: center;">Welcome To The Table Page</h3>
+            <br>
+        <h4>Html Table</h4>
+        <table class="table table-striped caption-top " style="border: 1px solid black; border-collapse:collapse">
+            <caption>Books</caption>
+            <thead>
+                <tr class="table-dark">
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <td scope="col">Author</th>
+                    <th scope="col">Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-light">
+                    <th scope="row">1</th>
+                    <td>Allack Sinner</td>
+                    <td>Carlos Sampayo</td>
+                    <td>19/1/2000</td>
+                </tr>
+                <tr class="table-light">
+                    <th scope="row">2</th>
+                    <td>Alpha</td>
+                    <td>Youri Jiogounov</td>
+                    <td>12/6/1999</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- Another table-->
+        <br>
+        <table  class= "table table-striped caption-top " style="border: 1px solid black; border-collapse:collapse">
+            <caption>Movies</caption>
+            <thead>
+                <tr class="table-dark">
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Actor</th>
+                    <th scope="col">Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-light">
+                    <th scope="row">1</th>
+                    <td>The Dark Night</td>
+                    <td>Christian Bale</td>
+                    <td>19/10/2008</td>
+                </tr>
+                <tr class="table-light">
+                    <th scope="row">2</th>
+                    <td>DeadPool</td>
+                    <td>Ryan Reynolds</td>
+                    <td>12/2/2016</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <p>
+            In this Webpage there are two Tables that give a brief information on Books and Movies.
+            <br>
+            The Books Table give a list of Book information such as,
+            Name of Book , Author and Date Published.<br>
+            The Movies table is used to provide a list of movies name, actor and date released.
+            <br>
+            I used HTML tables to create this table.
+        </p>
+        </div>
+        
+        <script href="../officeData.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>

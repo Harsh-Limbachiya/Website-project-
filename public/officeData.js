@@ -1,0 +1,117 @@
+/*********************************************************************************
+* WEB322 – Assignment 04
+* I declare that this assignment is my own work in accordance with Seneca Academic Policy. No part 
+* of this assignment has been copied manually or electronically from any other source 
+* (including 3rd party web sites) or distributed to other students.
+* 
+* Name: Harsh Vishnu Limbachiya  Student ID: 157295197  Date: 05s/07/2022
+*
+********************************************************************************/
+const { rejects } = require("assert");
+const fs = require("fs");
+const { resolve } = require("path");
+
+class Data{
+    constructor(employees, classes){
+        this.employees = employees;
+        this.classes = classes;
+    }
+}
+
+let dataCollection = null;
+
+
+module.exports.initialize = function () {
+    return new Promise( (resolve, reject) => {
+        fs.readFile('./data/classes.json','utf8', (err, classesData) => {
+            if (err) {
+                reject("unable to load classes"); return;
+            }
+
+            fs.readFile('./data/employees.json','utf8', (err, employeeData) => {
+                if (err) {
+                    reject("unable to load employees"); return;
+                }
+
+                dataCollection = new Data(JSON.parse(employeeData), JSON.parse(classesData));
+                resolve();
+            });
+        });
+    });
+}
+
+module.exports.getAllEmployees = function(){
+    return new Promise((resolve,reject)=>{
+        if (dataCollection.employees.length == 0) {
+            reject("query returned 0 results"); return;
+        }
+
+        resolve(dataCollection.employees);
+    })
+}
+
+module.exports.getEmployeeByNum = function(num)
+{
+    return new Promise((reolve, reject) => {
+        var found = null;
+        for(let i = 0; i < dataCollection.employees.length; i++){
+                if(dataCollection.employees[i].employeeNum = num)
+                {
+                    found = dataCollection.employees[i];
+                }
+        }
+        if(!found){
+            reject("No resuls returned");
+            return;   
+        }
+        resolve(found);
+    })
+};
+
+module.exports.getEAs = function () {
+    return new Promise(function (resolve, reject) {
+        var filteredemployees = [];
+
+        for (let i = 0; i < dataCollection.employees.length; i++) {
+            if (dataCollection.employees[i].EA == true) {
+                filteredemployees.push(dataCollection.employees[i]);
+            }
+        }
+
+        if (filteredemployees.length == 0) {
+            reject("query returned 0 results"); return;
+        }
+
+        resolve(filteredemployees);
+    });
+};
+
+module.exports.getPartTimers = function () {
+    return new Promise(function (resolve, reject) {
+        var filteredemployees = [];
+
+        for (let i = 0; i < dataCollection.employees.length; i++) {
+            if (dataCollection.employees[i].status == "Part Time") {
+                filteredemployees.push(dataCollection.employees[i]);
+            }
+        }
+
+        if (filteredemployees.length == 0) {
+            reject("query returned 0 results"); return;
+        }
+
+        resolve(filteredemployees);
+    });
+};
+
+module.exports.getclasses = function(){
+   return new Promise((resolve,reject)=>{
+    if (dataCollection.classes.length == 0) {
+        reject("query returned 0 results"); return;
+    }
+
+    resolve(dataCollection.classes);
+   });
+}
+
+

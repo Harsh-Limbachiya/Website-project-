@@ -1,0 +1,30 @@
+html {
+    font-family: 'Gentium Book Plus', serif;
+    background: red; /* fallback color */
+    background: linear-gradient( to bottom, rgb(0, 255, 251), yellow);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+ body{
+    font: 1rem/1.5 var(--bs-font-sans-serif);
+  } 
+  a {
+    color: var(--bs-blue);
+  }
+
+  .bodyPart{
+    font-family: 'Gentium Book Plus', serif;
+    background: red; /* fallback color */
+    background: linear-gradient( to bottom, rgb(0, 255, 251), yellow);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    margin-top: 58px;
+  }
+ 
+caption {
+    font-size: 20px;
+    text-align: center;
+}
